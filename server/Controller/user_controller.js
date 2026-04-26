@@ -7,7 +7,7 @@ const registeruser = async(req, res)=>{
         const {name, email, password, phone, address} = req.body;
         const useremail = await usertable.findOne({email})
         if(useremail){
-            res.jdon({message:"Email already exist"})
+            res.json({message:"Email already exist"})
         }
 
         const userdetails = new usertable({
@@ -63,7 +63,7 @@ const updateuser = async(req,res)=>{
     try {
         const uid = req.params.id;
         const body = req.body;
-        const updateuser = await usertable.findByIdAndUpdate(id, body, {new:true})
+        const updateuser = await usertable.findByIdAndUpdate(uid, body, {new:true})
         console.log(updateuser)
         res.status(200).json({message:"user updated", updatedata:updateuser})
     } catch (error) {
