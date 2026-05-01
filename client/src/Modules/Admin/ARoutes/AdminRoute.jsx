@@ -12,6 +12,8 @@ import ViewCategory from '../AComponents/ViewCategory'
 import UpdateCategory from '../AComponents/UpdateCategory'
 import AddProduct from '../AComponents/AddProduct'
 import UpdateProduct from '../AComponents/UpdateProduct'
+import AdminLogin from '../AComponents/AdminLogin'
+import ViewBooking from '../AComponents/ViewBooking'
 const AdminRoutes = () => {
   return (
     <div>
@@ -29,6 +31,9 @@ ViewUser/>} />
         <Route path='/ViewCategory' element={<ViewCategory/>} />
         <Route path='UpdateCategory/:id' element={<UpdateCategory/>} />
         <Route path='/UpdateProduct/:id' element={<UpdateProduct/>} />
+         <Route path='/UpdateProduct/:id' element={<UpdateProduct/>} />
+        <Route path='/AdminLogin' element={<AdminLogin/>}/>
+        <Route path='/ViewBooking' element={<ViewBooking/>}/>
       </Routes>
     </div>
   )
