@@ -22,4 +22,8 @@ app.use('/product', require('./Routes/product_route'))
 
 app.use('/category', require('./Routes/category_route'))
 
+app.use('/booking',require("./Routes/booking_route"))
+
+app.use('/admin',require("./Routes/admin_route"))
+
 app.use("/image", express.static("./Uploads"))
